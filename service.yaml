@@ -1,0 +1,11 @@
+# The source of truth for this service in the registry. CI publishes it to
+# github.com/mcafeelabs/services under services/identity/.
+apiVersion: platform/v1
+name: identity
+owner: team-identity
+chartProfile: http-api
+provides:
+  - name: api
+    kind: http-endpoint
+config:
+  schema: ./config-values.schema.yaml
